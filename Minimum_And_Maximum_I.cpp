@@ -215,7 +215,46 @@ ll keep_the_last_set_bit(ll n) {
 // ------------------------------------------ XXX--------------------------------------------
 
 void Arion() {
+    ll n;
+    cin >> n;
+
+    // V a(n,0);
+    ll ans = 0;
+    if(n==3) {
+        cout << 4 << endl;
+        return;
+    }
+
+    if(n&1) {
+        ll k = n/2;
+        ans += (k*(k+1));
+        ans += k+1;
+    }
+    else {
+        ll k = n/2;
+        ans += k*(k+1);
+    }
+
+    // n -= 3;
+    // // for(ll i=0; i<n; i++) {
+    // //     cin >> a[i];
+    // //     ans += a[i];
+    // //     ans += a[i];
+    // // }
+    // // sort(a.begin(),a.end());
     
+    
+    // // ll i=0, j=n-1;
+
+    // ll k = 1;
+    // ll add = 1;
+    // while(n--) {
+    //     if(k&1) {
+    //         ans += add;
+    //     }
+    // }
+
+    cout << ans << endl;
 }
  
 int main() {

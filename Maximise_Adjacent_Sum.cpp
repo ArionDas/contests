@@ -215,7 +215,19 @@ ll keep_the_last_set_bit(ll n) {
 // ------------------------------------------ XXX--------------------------------------------
 
 void Arion() {
-    
+    ll n;
+    cin >> n;
+
+    V a(n,0);
+    ll ans = 0;
+    for(ll i=0; i<n; i++) {
+        cin >> a[i];
+        ans += a[i];
+        ans += a[i];
+    }
+    sort(a.begin(),a.end());
+    ans -= (a[0]+a[1]);
+    cout << ans << endl;
 }
  
 int main() {

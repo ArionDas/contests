@@ -215,8 +215,59 @@ ll keep_the_last_set_bit(ll n) {
 // ------------------------------------------ XXX--------------------------------------------
 
 void Arion() {
+    ll n,q;
+    cin >> n >> q;
+
+    V a(n,0);
+    ll maxsum = 0;
+    ll minsum = 0;
+    ll sum = 0;
+    for(ll i=0; i<n; i++) {
+        cin >> a[i];
+        sum += a[i];
+        // maxsum += a[i];
+        // maxsum += a[i];
+        // minsum += a[i];
+        // minsum += a[i];
+    }
+    sort(a.begin(),a.end());
+    // maxsum -= (a[0]+a[1]);
+    // minsum -= (a[n-1]+a[n-2]);
     
-}
+    unordered_map<ll,ll> um;
+    
+    while(q--) {
+        ll x;
+        cin >> x;
+
+        ll sum_ = sum;
+
+        bool f = 0;
+
+        for (ll i =0; i < n; ++i) {
+                for (ll j = i + 1; j < n; ++j) {
+                    ll z = sum_ - a[i];
+                    z -= a[j];
+                    z = z * 2;
+                    z += a[i];
+                    z += a[j];
+                    if (z == x) {
+                        cout << a[i] << " ";
+                        for (ll k = 0; k < n; ++k) {
+                            if (k != i && k != j) {
+                                cout << a[k] << " ";
+                            }
+                        }
+                        cout << a[j] << endl;
+                        f = 1;
+                        break;
+                    }
+                }
+                if (f) break;
+            }
+            if (!f) cout << -1 << endl;
+        }
+    }
  
 int main() {
     ll t;

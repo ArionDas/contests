@@ -215,7 +215,127 @@ ll keep_the_last_set_bit(ll n) {
 // ------------------------------------------ XXX--------------------------------------------
 
 void Arion() {
+    ll n;
+    cin >> n;
+
+    ll ans = n*(n+1)/2-1 + n;
+
+    cout << ans << endl;
+
+    // V a(n,0);
+    // ll ans = 0;
+    // ll max_ = n*(n+1);
+    // if(n==3) {
+    //     cout << 8 << endl;
+    //     return;
+    // }
+    // if(n==4) {
+    //     cout << 13 << endl;
+    //     return;
+    // }
+
+    // ll m = n;
+
+    // if(n&1) {
+    //     ll k = n/2;
+    //     ans += (k*(k+1));
+    //     ans += k+1;
+    //     cout << max_ - ans << endl;
+    //     return;
+    // }
+    // else {
+    //     ll k = n/2;
+    //     ans += k*(k+1);
+    //     cout << max_ - ans << endl;
+    //     return;
+    // }
+
+    // if(n&1) {
+    //     // while(m>1) {
+    //     //     ans += 2*n;
+    //     //     n -= 1;
+    //     //     m -= 2;
+    //     // }
+    //     ll k = n/2;
+    //     ans += n;
+    //     cout << ans << endl;
+    //     return;
+    // }
+
+    // while(m) {
+    //     ans += 2*n;
+    //     n -= 1;
+    //     m -= 2;
+    // }
+
+    // cout << ans << endl;
+
+    // if(n&1) {
+    //     ll k = n/2;
+    //     ans += (k*(k+1));
+    //     ans += k+1;
+    // }
+    // else {
+    //     ll k = n/2;
+    //     ans += k*(k+1);
+    // }
+
+    // cout << max_ - ans << endl;
+    // return;
+
+    // ll m = n;
+    // V a;
+    // a.push_back(m);
+    // a.push_back(m);
+    // while(m--) {
+    //     a.push_back(m);
+    //     a.push_back(m);
+    // }
+    // ll i=0;
+    // while(n--) {
+    //     ans += a[i];
+    //     i += 1;
+    // }
+
+    // cout << ans << endl;
+
+    // if(n==4) {
+    //     cout << 13 << endl;
+    //     return;
+    // }
+
+    // if(n&1) {
+    //     ll k = n/2;
+    //     ans += (k*(k+1));
+    //     ans += k+1;
+    //     cout << max_ - ans << endl;
+    // }
+    // else {
+    //     ll k = n/2;
+    //     ans += k*(k+1);
+    //     cout << max_ - ans << endl;
+    // }
+
+    // n -= 3;
+    // // for(ll i=0; i<n; i++) {
+    // //     cin >> a[i];
+    // //     ans += a[i];
+    // //     ans += a[i];
+    // // }
+    // // sort(a.begin(),a.end());
     
+    
+    // // ll i=0, j=n-1;
+
+    // ll k = 1;
+    // ll add = 1;
+    // while(n--) {
+    //     if(k&1) {
+    //         ans += add;
+    //     }
+    // }
+
+    //cout << ans << endl;
 }
  
 int main() {
